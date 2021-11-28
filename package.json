@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "playwright": "^1.16.3",
+    "playwright-chromium": "^1.16.3",
     "twilio": "^3.71.2"
   },
   "devDependencies": {

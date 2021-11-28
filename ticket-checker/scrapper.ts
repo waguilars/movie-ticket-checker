@@ -1,5 +1,5 @@
 import { Context } from '@azure/functions';
-import { chromium, Page } from "playwright";
+import { chromium, Page } from "playwright-chromium";
 
 // const MY_MOVIE = process.env.MOVIE || "encanto";
 
