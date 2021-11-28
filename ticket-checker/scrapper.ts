@@ -46,6 +46,11 @@ const getMovieDetails = async (page: Page) => {
   const options = await page.$$(".col-xs-12.col-sm-6");
   const link = page.url();
 
+  let movieTitle =  await page.textContent('.MovieDetailTitleNative');
+  if (!movieTitle.trim()) {
+    movieTitle = await page.textContent('.MovieDetailTitle');
+  }
+
   const shows = [];
 
   for (const opt of options) {
@@ -61,6 +66,6 @@ const getMovieDetails = async (page: Page) => {
     shows.push({ title, availableSchedules });
   }
 
-  return { location, link, shows };
+  return { title: movieTitle ,location, link, shows };
 };
 
